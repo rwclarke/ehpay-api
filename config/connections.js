@@ -32,6 +32,16 @@ module.exports.connections = {
     adapter: 'sails-disk'
   },
 
+  mongoProd: {
+    adapter: 'sails-mongo',
+    url: process.env.DB,
+  },
+
+  mongoDev: {
+    adapter: 'sails-mongo',
+    url: '#'
+  },
+
   /***************************************************************************
   *                                                                          *
   * MySQL is the world's most popular relational database.                   *
