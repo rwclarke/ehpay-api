@@ -6,6 +6,9 @@
   "keywords": [],
   "dependencies": {
     "include-all": "^1.0.0",
+    "jsonwebtoken": "^7.3.0",
+    "machinepack-passwords": "^2.3.0",
+    "moment": "^2.17.1",
     "rc": "1.0.1",
     "sails": "~0.12.11",
     "sails-disk": "~0.10.9",

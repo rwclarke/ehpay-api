@@ -10,29 +10,44 @@
  *
  */
 
-module.exports = {
+ module.exports = {
 
-  /***************************************************************************
-   * Set the default database connection for models in the production        *
-   * environment (see config/connections.js and config/models.js )           *
-   ***************************************************************************/
+   /***************************************************************************
+    * Set the default database connection for models in the production        *
+    * environment (see config/connections.js and config/models.js )           *
+    ***************************************************************************/
 
-  // models: {
-  //   connection: 'someMysqlServer'
-  // },
+   models: {
+     connection: 'mongo',
+     migrate: 'safe',
+     schema: true
+   },
 
-  /***************************************************************************
-   * Set the port in the production environment to 80                        *
-   ***************************************************************************/
+   /***************************************************************************
+    * Set the socket connection in the production environment                 *
+    ***************************************************************************/
 
-  // port: 80,
+   // sockets: {
+   //   adapter: 'socket.io-redis', // @TODO this module must be installed first
+   //   host: '127.0.0.1',
+   //   port: 6379,
+   //   db: 0,
+   //   pass: '<redis auth password>',
+   //   transports: "websocket",
+   // },
 
-  /***************************************************************************
-   * Set the log level in production environment to "silent"                 *
-   ***************************************************************************/
+   /***************************************************************************
+    * Set the port in the production environment to 80                        *
+    ***************************************************************************/
 
-  // log: {
-  //   level: "silent"
-  // }
+   port: process.env.PORT,
 
-};
+   /***************************************************************************
+    * Set the log level in production environment to "silent"                 *
+    ***************************************************************************/
+
+   log: {
+     level: "info" // Change this to 'warn' in production
+   }
+
+ };
