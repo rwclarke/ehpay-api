@@ -32,9 +32,20 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  'post /api/v1/auth/login': {
+		controller: 'auth',
+		action: 'login'
+ 	},
+
+  'get /api/v1/auth/me': {
+    controller: 'auth',
+    action: 'me'
+  },
+
+  'post /api/v1/auth/verify': {
+    controller: 'auth',
+    action: 'verify'
+  },
 
   /***************************************************************************
   *                                                                          *
