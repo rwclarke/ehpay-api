@@ -47,6 +47,11 @@ module.exports.routes = {
     action: 'verify'
   },
 
+  'post /api/v1/stripe/connect': {
+    controller: 'stripe',
+    action: 'connect'
+  },
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

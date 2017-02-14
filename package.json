@@ -10,6 +10,7 @@
     "machinepack-passwords": "^2.3.0",
     "moment": "^2.17.1",
     "rc": "1.0.1",
+    "request": "^2.79.0",
     "sails": "~0.12.11",
     "sails-disk": "~0.10.9",
     "sails-mongo": "^0.12.2",
